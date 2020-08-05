@@ -1,1 +1,3 @@
-# TC1031_Estructuras_Fromativas
+# TC1031_Estructuras_Formativas
+
+Repositorio de ejemplo
