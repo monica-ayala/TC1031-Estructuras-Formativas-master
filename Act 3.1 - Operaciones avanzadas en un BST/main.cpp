@@ -8,42 +8,38 @@
 #include <sstream>
 #include <cstring>
 #include <string>
-#include "doublelist.h"
+#include "bst.h"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
-	DList<int> b1;
-	string ans;
+	BST<int> bst;
+	string  ans;
 
-	b1.add(2);
-	ans = "[2]";
-	cout << " 1 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
+	bst.add(10);
+	ans =	"[10]\n[10]\n[10]\n[10]";
+	cout << " 1 " <<	(!ans.compare(bst.visit()) ? "success\n" : "fail\n");
 
-	b1.add(3);
-	b1.add(6);
-	b1.add(10);
-	ans = "[2, 3, 6, 10]";
-	cout << " 2 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
+	cout << " 2 " <<	(1 == bst.height() ? "success\n" : "fail\n");
 
-	cout << " 3 " <<	(10 == b1.find(3) ? "success\n" : "fail\n");
+	bst.add(12);
+	bst.add(8);
+	bst.add(110);
+	bst.add(112);
+	bst.add(18);
+	ans = "[10 8 12 110 18 112]\n[8 10 12 18 110 112]\n[8 18 112 110 12 10]\n[10 8 12 110 18 112]";
+	cout << " 3 " <<	(!ans.compare(bst.visit()) ? "success\n" : "fail\n");
 
-	cout << " 4 " <<	(3 == b1.find(1) ? "success\n" : "fail\n");
+	cout << " 4 " <<	(4 == bst.height() ? "success\n" : "fail\n");
 
-	b1.update(1,13);
-	ans = "[2, 13, 6, 10]";
-	cout << " 5 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
+	ans = "[10 12 110]";
+	cout << " 5 " <<	(!ans.compare(bst.ancestors(112)) ? "success\n" : "fail\n");
 
-	b1.update(3,32);
-	ans ="[2, 13, 6, 32]";
-	cout << " 6 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
+	ans = "[]";
+	cout << " 6 " <<	(!ans.compare(bst.ancestors(1000)) ? "success\n" : "fail\n");
 
-	b1.del(0);
-	ans = "[13, 6, 32]";
-	cout << " 7 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
+	cout << " 7 " <<	(4 == bst.whatlevelamI(18) ? "success\n" : "fail\n");
 
-	b1.del(1);
-	ans = "[13, 32]";
-	cout << " 8 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
+	cout << " 8 " <<	(2 == bst.whatlevelamI(8) ? "success\n" : "fail\n");
 
 }
