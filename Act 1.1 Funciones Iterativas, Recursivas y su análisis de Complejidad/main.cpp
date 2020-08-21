@@ -26,8 +26,4 @@ int main(int argc, char* argv[]) {
 	cout << i++ << " " << ((1 == fun.sumaIterativa(1)) ? "success\n" : "fail\n");
 	cout << i++ << " " << ((1 == fun.sumaRecursiva(1)) ? "success\n" : "fail\n");
 	cout << i++ << " " << ((1 == fun.sumaDirecta(1)) ? "success\n" : "fail\n");
-	cout << i++ << " " << ((1789 == fun.sumaIterativa(1789)) ? "success\n" : "fail\n");
-	cout << i++ << " " << ((1789 == fun.sumaRecursiva(1789)) ? "success\n" : "fail\n");
-	cout << i++ << " " << ((1789 == fun.sumaDirecta(1789)) ? "success\n" : "fail\n");
-
 }
