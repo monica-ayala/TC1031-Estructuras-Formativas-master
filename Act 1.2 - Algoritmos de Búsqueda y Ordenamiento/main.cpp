@@ -54,14 +54,14 @@ int main(int argc, char* argv[]) {
 	string resp2 = "[5, 10, 68, 120, 333, 897]";
 
 	prueba = original1;
-	sorts.ordenaIntercambio(prueba);
+	sorts.ordenaSeleccion(prueba);
 	cout << arrayToString(prueba);
 	cout << resp1;
 
 	cout << " 1 " <<	(!resp1.compare(arrayToString(prueba)) ? "success\n" : "fail\n");
 
 	prueba = original2;
-	sorts.ordenaIntercambio(prueba);
+	sorts.ordenaSeleccion(prueba);
 	cout << " 2 " <<	(!resp2.compare(arrayToString(prueba)) ? "success\n" : "fail\n");
 
 	prueba = original1;
