@@ -26,9 +26,9 @@ int main(int argc, char* argv[]) {
 	ans = "[2, 3, 6, 10]";
 	cout << " 2 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
 
-	cout << " 3 " <<	(1 == b1.find(3) ? "success\n" : "fail\n");
+	cout << " 3 " <<	(3 == b1.find(10) ? "success\n" : "fail\n");
 
-	cout << " 4 " <<	(2 == b1.find(1) ? "success\n" : "fail\n");
+	cout << " 4 " <<	(-1 == b1.find(1) ? "success\n" : "fail\n");
 
 	b1.update(1,13);
 	ans = "[2, 13, 6, 10]";
