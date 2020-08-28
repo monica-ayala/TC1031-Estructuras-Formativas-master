@@ -4,6 +4,7 @@
  *  Created on: 10/08/2020
  *      Author: bvaldesa
  */
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -55,8 +56,6 @@ int main(int argc, char* argv[]) {
 
 	prueba = original1;
 	sorts.ordenaSeleccion(prueba);
-	cout << arrayToString(prueba);
-	cout << resp1;
 
 	cout << " 1 " <<	(!resp1.compare(arrayToString(prueba)) ? "success\n" : "fail\n");
 
@@ -80,12 +79,12 @@ int main(int argc, char* argv[]) {
 	sorts.ordenaMerge(prueba);
 	cout << " 6 " <<	(!resp2.compare(arrayToString(prueba)) ? "success\n" : "fail\n");
 
-  cout << " 7 " <<	(6 == sorts.busqSecuencial(resp1, 11) ? "success\n" : "fail\n");
+	sorts.ordenaMerge(prueba);
+  cout << " 7 " <<	(5 == sorts.busqSecuencial(prueba, 897) ? "success\n" : "fail\n");
 
-	cout << " 8 " <<	(-1 == sorts.busqSecuencial(resp2, 197) ? "success\n" : "fail\n");
+	cout << " 8 " <<	(-1 == sorts.busqSecuencial(prueba, 100) ? "success\n" : "fail\n");
 
-	cout << " 9 " <<	(6 == sorts.busqBinaria(resp1, 11) ? "success\n" : "fail\n");
+	cout << " 9 " <<	(4 == sorts.busqBinaria(prueba, 333) ? "success\n" : "fail\n");
 
-	cout << " 10" <<	(-1 == sorts.busqBinaria(resp2, 197) ? "success\n" : "fail\n");
-
+	cout << " 10" <<	(3 == sorts.busqBinaria(prueba, 197) ? "success\n" : "fail\n");
 }
