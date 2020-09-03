@@ -27,19 +27,6 @@ string arrayToString(const vector<T> &v) {
 	return aux.str();
 }
 
-template <class T>
-string listToString(const list<T> &v) {
-	typename list<T>::const_iterator itr;
-	stringstream aux;
-
-	itr = v.begin();
-	aux << "[" << *itr++;
-	for (; itr != v.end(); itr++) {
-		aux << ", " << *itr;
-	}
-	aux << "]";
-	return aux.str();
-}
 
 int main(int argc, char* argv[]) {
 
