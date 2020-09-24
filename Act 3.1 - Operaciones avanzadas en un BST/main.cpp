@@ -17,6 +17,7 @@ int main(int argc, char* argv[]) {
 	string  ans;
 
 	bst.add(10);
+
 	ans =	"[10]\n[10]\n[10]\n[10]";
 	cout << " 1 " <<	(!ans.compare(bst.visit()) ? "success\n" : "fail\n");
 
@@ -27,6 +28,7 @@ int main(int argc, char* argv[]) {
 	bst.add(110);
 	bst.add(112);
 	bst.add(18);
+
 	ans = "[10 8 12 110 18 112]\n[8 10 12 18 110 112]\n[8 18 112 110 12 10]\n[10 8 12 110 18 112]";
 	cout << " 3 " <<	(!ans.compare(bst.visit()) ? "success\n" : "fail\n");
 

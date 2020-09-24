@@ -12,6 +12,28 @@
 
 using namespace std;
 
+
+/* Agregar un metodo toString a su clase.h
+
+template <class T>
+std::string List<T>::toString() const {
+	std::stringstream aux;
+	Link<T> *p;
+
+	p = head;
+	aux << "[";
+	while (p != 0) {
+		aux << p->value;
+		if (p->next != 0) {
+			aux << ", ";
+		}
+		p = p->next;
+	}
+	aux << "]";
+	return aux.str();
+}
+*/
+
 int main(int argc, char* argv[]) {
 	List<int> b1;
 	string ans;
