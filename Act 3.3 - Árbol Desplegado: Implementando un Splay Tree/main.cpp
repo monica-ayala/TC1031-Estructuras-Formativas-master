@@ -84,15 +84,16 @@ int main(int argc, char* argv[]) {
   cout << " 4 " <<	(found == 1 ? "success\n" : "fail\n");
 
   my_splay.remove(13);  //bottum up
-  in_ans =	"[7 15 16 17]";
-  pre_ans =	"[15 7 16 17]";
+  in_ans =	"[7 10 15 16 17]";
+  pre_ans =	"[15 7 10 16 17]";
   cout << " 5 " <<	(!in_ans.compare(my_splay.inorder()) ? "success\n" : "fail\n");
   cout << " 5 " <<	(!pre_ans.compare(my_splay.preorder()) ? "success\n" : "fail\n");
   cout << " 5 " <<	(found == 1 ? "success\n" : "fail\n");
 
+
   my_splay.remove(16);  //bottum up
-  in_ans =	"[7 15 17]";
-  pre_ans =	"[15 7 17]";
+  in_ans =	"[7 10 15 17]";
+  pre_ans =	"[15 7 10 17]";
   cout << " 6 " <<	(!in_ans.compare(my_splay.inorder()) ? "success\n" : "fail\n");
   cout << " 6 " <<	(!pre_ans.compare(my_splay.preorder()) ? "success\n" : "fail\n");
   cout << " 6 " <<	(found == 1 ? "success\n" : "fail\n");
