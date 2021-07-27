@@ -61,23 +61,23 @@ int main(int argc, char* argv[]) {
 	DList<int> b1;
 	string front, back;
 
-	b1.add(2);
+	b1.insertion(2);
 	front = "[2]";
 	back = "[2]";
 	cout << " 1 " <<	(!front.compare(b1.toStringForward()) ? "success\n" : "fail\n");
 	cout << " 1 " <<	(!back.compare(b1.toStringBackward()) ? "success\n" : "fail\n");
 
- 	b1.add(3);
-	b1.add(6);
-	b1.add(10);
+ 	b1.insertion(3);
+	b1.insertion(6);
+	b1.insertion(10);
 	front = "[2, 3, 6, 10]";
 	back = "[10, 6, 3, 2]";
 	cout << " 2 " <<	(!front.compare(b1.toStringForward()) ? "success\n" : "fail\n");
 	cout << " 2 " <<	(!back.compare(b1.toStringBackward()) ? "success\n" : "fail\n");
 
-	cout << " 3 " <<	(3 == b1.find(10) ? "success\n" : "fail\n");
+	cout << " 3 " <<	(3 == b1.search(10) ? "success\n" : "fail\n");
 
-	cout << " 4 " <<	(-1 == b1.find(1) ? "success\n" : "fail\n");
+	cout << " 4 " <<	(-1 == b1.search(1) ? "success\n" : "fail\n");
 
 	b1.update(1,13);
 	front = "[2, 13, 6, 10]";
@@ -91,13 +91,13 @@ int main(int argc, char* argv[]) {
 	cout << " 6 " <<	(!front.compare(b1.toStringForward()) ? "success\n" : "fail\n");
 	cout << " 6 " <<	(!back.compare(b1.toStringBackward()) ? "success\n" : "fail\n");
 
-	b1.remove(0);
+	b1.deleteAt(0);
 	front = "[13, 6, 32]";
 	back = "[32, 6, 13]";
 	cout << " 7 " <<	(!front.compare(b1.toStringForward()) ? "success\n" : "fail\n");
 	cout << " 7 " <<	(!back.compare(b1.toStringBackward()) ? "success\n" : "fail\n");
 
-	b1.remove(1);
+	b1.deleteAt(1);
 	front = "[13, 32]";
 	back = "[32, 13]";
 	cout << " 8 " <<	(!front.compare(b1.toStringForward()) ? "success\n" : "fail\n");
