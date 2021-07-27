@@ -1,9 +1,11 @@
 /*
- * main.cpp
- *
- *  Created on: 30/10/2020
- *      Author: clase
- */
+*  autor: Benjamin Valdes Aguirre
+*  fecha: Diciembre 2020
+*  programa: act 4.1 Implementacion Grafos
+*  desc: estos programas son solciones parciales a algunos de
+*  las actividades planteadas en el curso TC1031
+*
+*/
 
 #include <iostream>
 #include <cstring>
@@ -19,11 +21,11 @@ int main(int argc, char* argv[]) {
     string g_ans, g_ans_2;
     string star_ans, star_ans_2;
 
-    g.loadGraphList("g1.txt", 7, 7);
-    star.loadGraphList("g2.txt", 5, 5);
+    g.loadGraphList("g.txt", 7, 7);
+    star.loadGraphList("star.txt", 5, 5);
 
-    g.loadGraphMat("g1.txt", 7, 7);
-    star.loadGraphMat("g2.txt", 5, 5);
+    g.loadGraphMat("g.txt", 7, 7);
+    star.loadGraphMat("star.txt", 5, 5);
 
     //g.printAdjList()
     g_ans ="vertex 0 : 1 4 vertex 1 : 0 2 3 vertex 2 : 1 vertex 3 : 1 6 vertex 4 : 0 5 vertex 5 : 4 vertex 6 : 3 ";

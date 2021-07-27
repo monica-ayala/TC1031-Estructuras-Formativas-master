@@ -44,6 +44,33 @@ void Node<T>::preorder(std::stringstream &aux) const {
 	}
 }
 
+template <class T>
+void Node<T>::inorder(std::stringstream &aux) const {
+	if (left != 0) {
+		left->inorder(aux);
+	}
+	if (aux.tellp() != 1) {
+		aux << " ";
+	}
+	aux << value;
+	if (right != 0) {
+		right->inorder(aux);
+	}
+}
+
+template <class T>
+void Node<T>::preorder(std::stringstream &aux) const {
+	aux << value;
+	if (left != 0) {
+		aux << " ";
+		left->preorder(aux);
+	}
+	if (right != 0) {
+		aux << " ";
+		right->preorder(aux);
+	}
+}
+
 */
 
 
