@@ -38,19 +38,19 @@ int main(int argc, char* argv[]) {
 	List<int> b1;
 	string ans;
 
-	b1.add(2);
+	b1.insertion(2);
 	ans = "[2]";
 	cout << " 1 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
 
-	b1.add(3);
-	b1.add(6);
-	b1.add(10);
+	b1.insertion(3);
+	b1.insertion(6);
+	b1.insertion(10);
 	ans = "[2, 3, 6, 10]";
 	cout << " 2 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
 
-	cout << " 3 " <<	(3 == b1.find(10) ? "success\n" : "fail\n");
+	cout << " 3 " <<	(3 == b1.search(10) ? "success\n" : "fail\n");
 
-	cout << " 4 " <<	(-1 == b1.find(1) ? "success\n" : "fail\n");
+	cout << " 4 " <<	(-1 == b1.search(1) ? "success\n" : "fail\n");
 
 	b1.update(1,13);
 	ans = "[2, 13, 6, 10]";
@@ -60,11 +60,11 @@ int main(int argc, char* argv[]) {
 	ans ="[2, 13, 6, 32]";
 	cout << " 6 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
 
-	b1.remove(0);
+	b1.deleteAt(0);
 	ans = "[13, 6, 32]";
 	cout << " 7 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
 
-	b1.remove(1);
+	b1.deleteAt(1);
 	ans = "[13, 32]";
 	cout << " 8 " <<	(!ans.compare(b1.toString()) ? "success\n" : "fail\n");
 
