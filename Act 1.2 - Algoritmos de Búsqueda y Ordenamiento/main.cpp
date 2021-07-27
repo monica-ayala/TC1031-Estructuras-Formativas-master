@@ -73,5 +73,5 @@ int main(int argc, char* argv[]) {
 
 	cout << " 9 " <<	(4 == sorts.busqBinaria(prueba, 333) ? "success\n" : "fail\n");
 
-	cout << " 10" <<	(3 == sorts.busqBinaria(prueba, 197) ? "success\n" : "fail\n");
+	cout << " 10" <<	(-1 == sorts.busqBinaria(prueba, 197) ? "success\n" : "fail\n");
 }
