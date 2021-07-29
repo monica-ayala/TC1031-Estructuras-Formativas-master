@@ -10,7 +10,6 @@
 #include <cstring>
 #include <string>
 #include "quadratic.h"
-#include "chain.h"
 
 
 using namespace std;
@@ -54,23 +53,27 @@ int main(int argc, char* argv[]) {
 
 			q_ans = "(0 operador : 18) (1 magneto : 17) (2 amos : 15) (3 taza : 18) (5 caza : 13) (7 tecnica : 11) (8 casa : 12) ";
 
-			cout << " 1 " <<	( (!q_ans.compare(quad_hash.toString().c_str())) ? "success\n" : "fail\n");
+			cout << "\n" <<"1.- esperada " << q_ans << "\n programa " << quad_hash.toString().c_str() << "\n";
+		  cout <<	( (!q_ans.compare(quad_hash.toString().c_str())) ? "success\n" : "fail\n");
 
 			quad_hash.put(string("max"), 99);
 			quad_hash.put(string("cocacola"), 188);
 
 			q_ans = "(0 operador : 18) (1 magneto : 17) (2 amos : 15) (3 taza : 18) (5 caza : 13) (6 max : 99) (7 tecnica : 11) (8 casa : 12) ";
 
-			cout << " 2 " <<	( (!q_ans.compare(quad_hash.toString().c_str())) ? "success\n" : "fail\n");
+			cout << "\n" <<"2.- esperada " << q_ans << "\n programa " << quad_hash.toString().c_str() << "\n";
+			cout << ( (!q_ans.compare(quad_hash.toString().c_str())) ? "success\n" : "fail\n");
 
 			ans = 12;
 
-			cout << " 3 " <<	( ans == quad_hash.get("casa") ? "success\n" : "fail\n");
+			cout << "\n" <<"3.- esperada " << ans << " programa " << quad_hash.get("casa") << "\n";
+			cout <<	( ans == quad_hash.get("casa") ? "success\n" : "fail\n");
 
 			quad_hash.put(string("concha"), 16);
 
 			ans = 17;
 
+			cout << "\n" <<"4.- esperada " << ans << " programa " << quad_hash.get("magneto") << "\n";
 			cout << " 4 " <<	( ans == quad_hash.get("magneto") ? "success\n" : "fail\n");
 
 			return 0;
