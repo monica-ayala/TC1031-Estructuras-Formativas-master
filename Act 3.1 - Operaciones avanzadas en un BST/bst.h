@@ -28,7 +28,7 @@ public:
 	void levelbylevel(std::stringstream&, int) const;
 	void ancestors(T, std::stringstream&) const;
 	int height(int) const;
-	int whatlevelamI(T,int) const;
+	int whatlevelamI(T) const;
 
 	friend class BST<T>;
 };
@@ -212,20 +212,14 @@ int Node<T>::height(int a) const{
 }
 
 template <class T>
-int Node<T>::whatlevelamI(T val ,int nivel) const{
-  if (val == value) {
-		return nivel;
-	} 
-  else if (val < value) {
-		if(left != 0){
-			left->whatlevelamI(val, nivel+1);
-		} 
-	} 
-  else if (val > value) {
-		if(right != 0){
-			right->whatlevelamI(val, nivel+1);
-		} 
-	}
+int Node<T>::whatlevelamI(T val) const {
+    if (val == value) return 1;
+    if (val < value) {
+        if (left != 0) return left->whatlevelamI(val) + 1;
+    } else {
+        if (right != 0) return right->whatlevelamI(val) + 1;
+    }
+    return -1;
 }
 
 // functions of BTS
@@ -309,20 +303,7 @@ std::string BST<T>::ancestors(T val){
 
 template <class T>
 int BST<T>::whatlevelamI(T val) const{
-	if (val == root -> value) {
-		return 1;
-	} 
-  else if (val < root -> value) {
-		if(root -> left != 0){
-			root -> left -> whatlevelamI(val, 2);
-		} 
-    else return -1;
-	} 
-  else if (val > root -> value) {
-		if( root -> right != 0){
-			root -> right -> whatlevelamI(val, 2);
-		} 
-    else return -1;
-	}
+  int level = root -> whatlevelamI(val);
+  return level;
 }
 #endif /* BST_H_ */
