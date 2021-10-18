@@ -1,0 +1,15 @@
+Análisis de complejidad 
+
+visit
+  tiene una complejidad de O(n)
+
+height
+  tiene una complejidad de O(n)
+  
+ancestor
+  tiene una complejidad de O(n)
+  
+whatlevelamI
+  tiene una complejidad de O(n)
+  
+todas las funciones tienen una complejidad de O(n) gracias a que estamos usando una estructura de árbol que utiliza recursividad 
