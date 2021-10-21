@@ -1,0 +1,13 @@
+Análisis de complejidad 
+
+Método add
+ O(log(n)).
+
+Método remove
+ O(log(n)*n).
+
+Método find
+O(log(n)).
+
+Método size
+ O(n).
