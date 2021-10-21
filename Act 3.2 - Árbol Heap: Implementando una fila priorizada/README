@@ -1,0 +1,16 @@
+Análisis de Complejidad
+
+1. Push
+  Complejidad O(n), ya que recorre todo el heap
+
+2. Top
+  Complejidad O(1), ya que regresa el último dato/dato de mayor prioridad
+  
+3. Pop
+  Complejidad O(1), ya que se elimina un dato del heap y decrece el count/size del heap, ambas operaciones constantes
+
+4. Empty
+  Complejidad O(1), es una instrucción constante al solo validar que este vacío el heap con una comparación
+
+5. Size
+  Complejidad de O(1), es una instrucción constante al ser solo un return de un atributo privado de la clase
