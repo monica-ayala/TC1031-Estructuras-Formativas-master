@@ -1,7 +1,9 @@
+**ACTIVIDAD CORREGIDA**
+
 Análisis de Complejidad
 
 1. Push
-  Complejidad O(n), ya que recorre todo el heap
+  Complejidad de O(log(n)), pues se usa la función heapify().En el peor de los casos, se haría un swap de nivel para mntener la propiedad de un árbol heap.
 
 2. Top
   Complejidad O(1), ya que regresa el último dato/dato de mayor prioridad
