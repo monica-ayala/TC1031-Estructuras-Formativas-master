@@ -1,0 +1,11 @@
+**ACTIVIDAD CORREGIDA**
+
+Análisis de complejidad:
+
+  Put
+    Complejidad de O(1), ya que solo se calcula el indice*
+
+  Get
+    Complejidad de O(1), ya que solo se calcula el indice*
+    
+ *Puede alcanzar una complejidad de O(n) al haber colisiones que nos hagan recorrer todo el arreglo.
