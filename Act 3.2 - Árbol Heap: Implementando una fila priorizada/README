@@ -9,7 +9,7 @@ Análisis de Complejidad
   Complejidad O(1), ya que regresa el último dato/dato de mayor prioridad
   
 3. Pop
-  Complejidad O(1), ya que se elimina un dato del heap y decrece el count/size del heap, ambas operaciones constantes
+  Complejidad de O(log(n)), pues se usa la función heapify().En el peor de los casos, se haría un swap de nivel para mntener la propiedad de un árbol heap.
 
 4. Empty
   Complejidad O(1), es una instrucción constante al solo validar que este vacío el heap con una comparación
