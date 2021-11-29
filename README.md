@@ -1,12 +1,12 @@
 # TC1031_Estructuras_Formativas
 
-Repositorio de ejemplo
+Repositorio de actividades formativas de la materia TC1031 - Estructura de datos
+Elaborado por: Mónica Andrea Ayala Marrero
 
 # Correcciones en actividades
- ### Act 1.1 Funciones Iterativas, Recursivas y su análisis de Complejidad/
-* Se agregó analisis de complejidad para función recursiva en suma renglon 37 de funciones.h
- 
-* Se agregaó función iterativa que antes no pasaba una de la pruebas, ya que se iniciaba el conteo del ciclo fuera de lugar. Ahora inicia en 0 y termina en n-1 y pasa las prubas del último main en linea 50 funciones.h
- 
- ### Act 3.2 - Árbol Heap: Implementando una fila priorizada/
-* El programo tenía errores de compilación, se corrigió el error de compilación (caracteres no válidos y faltaban funciones por declarar) y el programa ya es compatible con el último main en el repositorio de prueba.
+  - se agregó Act 1.2 
+  - se corrigió función visit() de Act 3.1
+  - se corrigió readme de Act 3.2
+  - se agregó Act 4.1
+  - se agregó Act 5.1
+
