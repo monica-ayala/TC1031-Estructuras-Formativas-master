@@ -1,6 +1,7 @@
 # TC1031_Estructuras_Formativas
 
 Repositorio de actividades formativas de la materia TC1031 - Estructura de datos
+
 Elaborado por: Mónica Andrea Ayala Marrero
 
 # Correcciones en actividades
