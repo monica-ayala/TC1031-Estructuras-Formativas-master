@@ -40,6 +40,7 @@ private:
 
 public:
 	BST();
+  string inorder() const;
   void add(T);
   bool find(T) const;
 	std::string visit() const;
@@ -247,21 +248,26 @@ bool BST<T>::find(T val) const {
 }
 
 template <class T>
+string BST<T>::inorder() const {
+    stringstream aux;
+    aux << "[";
+    if (!(root == 0)) root->inorder(aux);
+    aux << "]";
+    return aux.str();
+}
+
+template <class T>
 std::string BST<T>::visit() const{
   std::stringstream aux;
 
 	aux << "[";
 	if (!(root == 0)){
-		root->inorder(aux);
-	}
-	aux << "]"<<endl;
-
-	aux << "[";
-	if (!(root == 0)) {
 		root->preorder(aux);
 	}
 	aux << "]"<<endl;
 
+	aux << inorder() << endl;
+  
 	aux << "[";
 	if (!(root == 0)) {
 		root->postorder(aux);
