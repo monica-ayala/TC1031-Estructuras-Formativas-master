@@ -1,0 +1,12 @@
+**ACTIVIDAD CORREGIDA**
+
+Análisis de coplejidad:
+
+  Load Graph List : 
+    Complejidad de O(n), ya que depende del numero de renglones que tenga el archivo de texto.
+
+  DFS
+    Complejidad de: O(V + A), ya que considera el numero de nodos y de aristas
+
+  BFS
+    Complejidad de: O(V + A), ya que considera el numero de nodos y de aristas
