@@ -1,13 +1,13 @@
 Análisis de complejidad 
 
 Método add
- O(log(n)).
+ Complejidad O(log(n)).
 
 Método remove
- O(log(n)*n).
+ Complejidad O(log(n)*n).
 
 Método find
-O(log(n)).
+ Complejidad O(log(n)).
 
 Método size
- O(n).
+ Complejidad O(n).
